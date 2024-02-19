@@ -17,6 +17,7 @@ Sample Input
 
 Sample Output
 
+/*
      #
     ##
    ###
