@@ -34,9 +34,7 @@ function readLine() {
 function angryProfessor(k, a) {
     // Write your code here
     const onTimeStudents = a.filter(arrivalTime => arrivalTime <= 0)
-    
-    
-    
+
     if(onTimeStudents.length >= k) {
         return "NO"
     } 
