@@ -36,19 +36,24 @@ function beautifulDays(i, j, k) {
     // Write your code here
     let counterOfDays = 0
     
-    for(i; i <= j; i++) {
-        let reversedString = i.toString().split('').        reverse().join('');
-        let reversedNum = parseInt(reversedString);
+    for(let day = i; day <= j; day++) {
         
-        if((i - reversedNum) % k === 0) {
-            counterOfDays += 1
+        let reversedNum = reverseNumber(day)
+        
+        if((day - reversedNum) % k === 0) {
+            counterOfDays++
         }
     }
     
-    
     return counterOfDays
     
-    
+}
+
+function reverseNumber(num) {
+    let reversedString = num.toString().split('').reverse().join('');
+    let reversedNum = parseInt(reversedString);
+
+    return reversedNum;
 }
 
 function main() {
