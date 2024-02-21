@@ -33,15 +33,11 @@ function readLine() {
 
 function angryProfessor(k, a) {
     // Write your code here
-    const attendanceStudents = []
+    const onTimeStudents = a.filter(arrivalTime => arrivalTime <= 0)
     
-    a.forEach((student) => {
-        if(student <= 0) {
-            attendanceStudents.push(student)
-        } 
-    })
     
-    if(attendanceStudents.length >= k) {
+    
+    if(onTimeStudents.length >= k) {
         return "NO"
     } 
     
