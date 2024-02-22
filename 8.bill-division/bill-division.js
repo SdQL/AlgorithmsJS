@@ -32,13 +32,10 @@ function readLine() {
 function bonAppetit(bill, k, b) {
     // Write your code here
     const ANNA_BILL = bill.reduce((a, b) => a + b, 0) - bill[k]
+    const result = (ANNA_BILL / 2 === b) ? "Bon Appetit" : b - (ANNA_BILL / 2)
     
-    if(ANNA_BILL / 2 === b) {
-        console.log("Bon Appetit")
-    } else {
-        console.log(b - (ANNA_BILL / 2))
-    }
-    
+    console.log(result)
+
 }
 
 function main() {
