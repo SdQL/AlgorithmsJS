@@ -30,7 +30,7 @@ function readLine() {
  *  1. INTEGER n
  *  2. INTEGER_ARRAY ar
  */
-function countDuplicates(numbers) {
+function getDuplicatesCount(numbers) {
     const countMap = {};
     const duplicatesMap = {};
     numbers.forEach(number => {
@@ -44,17 +44,16 @@ function countDuplicates(numbers) {
 }
 
 function sockMerchant(n, ar) {
-    // Write your code here
-    const duplicates = countDuplicates(ar)
-    let pairsCount = 0
+    const duplicates = getDuplicatesCount(ar);
+    let pairsCount = 0;
     
-    for(let num in duplicates) {
-        pairsCount += Math.floor(duplicates[num] / 2)
+    for(const [num, count] of Object.entries(duplicates)) {
+        pairsCount += Math.floor(count / 2);
     }
     
-    return pairsCount
-
+    return pairsCount;
 }
+
 
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
