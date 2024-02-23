@@ -35,11 +35,11 @@ function findDigits(n) {
     
     let countDivisibles = 0
     
-    for(let digit of digits) {
+    digits.forEach(digit => {
         if(n % digit === 0) {
             countDivisibles++
         }
-    }
+    })
     
     return countDivisibles
 }
