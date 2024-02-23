@@ -30,18 +30,11 @@ function readLine() {
  */
 
 function findDigits(n) {
-    // Write your code here
-    const digits = n.toString().split('').map(Number).filter(num => num != 0)
-    
-    let countDivisibles = 0
-    
-    digits.forEach(digit => {
-        if(n % digit === 0) {
-            countDivisibles++
-        }
-    })
-    
-    return countDivisibles
+    return n
+        .toString()
+        .split('')
+        .filter(digit => digit !== '0' && n % parseInt(digit) === 0)
+        .length;
 }
 
 function main() {
