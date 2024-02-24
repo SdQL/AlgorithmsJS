@@ -45,7 +45,26 @@ function viralAdvertising(n) {
     return cumulative;
 }
 
-console.log(viralAdvertising(5)); // Output should be 24
+/**
+ * function viralAdvertising(n) {
+    let shared = 5;
+    let liked = 0;
+    let cumulative = 0;
+    let day = 1;
+
+    while (day <= n) {
+        liked = Math.floor(shared / 2);
+        cumulative += liked;
+        shared = liked * 3;
+        day++;
+    }
+
+    return cumulative;
+}
+
+ */
+
+
 
 
 function main() {
