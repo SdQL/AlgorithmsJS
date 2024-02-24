@@ -30,19 +30,23 @@ function readLine() {
  */
 
 function viralAdvertising(n) {
-    let likedPeople = Math.floor(5/2)
-    let amount = 0
-    let day = 1
-    while(day < n) {
-       let shared = likedPeople * 3
-       likedPeople = Math.floor(shared / 2)
-       amount += likedPeople
-       
-       day++ 
+    let shared = 5;
+    let liked = 0;
+    let cumulative = 0;
+    let day = 1;
+
+    while (day <= n) {
+        liked = Math.floor(shared / 2);
+        cumulative += liked;
+        shared = liked * 3;
+        day++;
     }
-    
-    return amount + 2
+
+    return cumulative;
 }
+
+console.log(viralAdvertising(5)); // Output should be 24
+
 
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
