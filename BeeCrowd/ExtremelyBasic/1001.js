@@ -7,8 +7,8 @@ var lines = input.split('\n');
  * Escriba su solución aquí
  */
 
-let A = lines[0];
-let B = lines[1];
+let A = parseInt(lines[0]);
+let B = parseInt(lines[1]);
 
 const X = A + B;
 console.log('X = ' + X)
